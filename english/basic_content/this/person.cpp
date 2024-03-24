@@ -9,9 +9,9 @@ public:
         BOY = 0, 
         GIRL 
     }SexType;
-    Person(char *n, int a,SexType s){
-        name=new char[strlen(n)+1];
-        strcpy(name,n);
+    Person(const char *n, int a,SexType s){
+        name = new char[strlen(n) + 1];
+        strcpy(name, n);
         age=a;
         sex=s;
     }
@@ -34,8 +34,8 @@ private:
 
 
 int main(){
-    Person p("zhangsan",20,Person::BOY); 
-    cout<<p.get_age()<<endl;
+    Person p("zhangsan", 20, Person::BOY);
+    cout << p.get_age() << endl;
 
     return 0;
 }
